@@ -331,10 +331,16 @@ COLLABORATION = **How much user involvement needed** (Creative → deep dialogue
 
 - **Determine TYPE**: What category does this aspect belong to? (Data/Foundational/Feature/etc.)
 - **Determine COLLABORATION-TYPE**: How much user involvement needed? (USER-CREATIVE/USER-STRATEGIC/USER-INFORMED/CLAUDE-AUTONOMOUS)
-- **Identify Sub-Aspects**: Does this need breakdown into focused areas? Create as many as needed!
-- **Determine Depth**: Do any sub-aspects need sub-sub-aspects? Sub-sub-sub-aspects? Continue recursively!
-- **Continue recursively to ANY depth** until reaching focused "leaves" - could be 2 levels, could be 5+ levels
-- **NO LIMITS** on breadth or depth - represent the FULL scope needed for complete planning
+- **Identify Question Categories vs Sub-Aspects**:
+  - **DEFAULT**: Organize topics as **question categories** within the aspect (thicker aspects)
+  - **ONLY create sub-aspects when**:
+    - Topic requires its own dedicated brainstorm session (15-30+ questions)
+    - Has fundamentally different concerns/context from parent
+    - Would benefit from separate architectural consideration
+    - Represents genuine structural decomposition (not just a topic to explore)
+- **Sub-Aspect Criteria**: If creating sub-aspects, ensure each represents ARCHITECTURAL SEPARATION not just TOPICAL COVERAGE
+- **Continue recursively but scaled back one degree**: Less nesting, more question categories within aspects
+- **NO LIMITS** on main aspect count - represent the FULL scope needed for complete planning
 
 **Example TYPE Analysis for Nutri:**
 ```
@@ -543,12 +549,24 @@ Use `mcp__sequential-thinking__sequentialthinking` EXTENSIVELY (15-30+ thinks) t
 
 **For EACH Main Aspect (approved in Gate 1):**
 
-- **Identify Sub-Aspects**: Does this need breakdown into focused areas? Create as many as needed!
-- **Determine Depth**: Do any sub-aspects need sub-sub-aspects? Sub-sub-sub-aspects? Continue recursively!
-- **Continue recursively to ANY depth** until reaching focused "leaves" - could be 2 levels, could be 5+ levels
-- **NO LIMITS** on breadth or depth - represent the FULL scope needed for complete planning
-- **Assign TYPEs to sub-aspects**: Each sub-aspect gets TYPE classification
-- **Validate completeness**: Does this sub-aspect tree cover everything needed for the main aspect?
+- **Identify Question Categories vs Sub-Aspects**:
+  - **DEFAULT**: Organize as question categories within main aspect
+  - **ONLY create sub-aspects** when genuinely warranted (see criteria below)
+- **Sub-Aspect Justification Criteria**:
+  - Would require 15-30+ questions of its own
+  - Has fundamentally different architectural concerns
+  - Represents genuine structural decomposition
+  - NOT just a topic that could be explored as questions within parent
+- **Question Category Examples** (do NOT make sub-aspects):
+  - "Farm entities" within "Platform Data Model" → Question category
+  - "Color palette" within "Design System" → Question category
+  - "Unit standards" within "Compound Database" → Question category
+- **Sub-Aspect Examples** (DO make sub-aspects):
+  - "Authentication" under "Security & Compliance" → Separate architectural domain
+  - "Real-time Sync" under "Technical Infrastructure" → Complex enough for own session
+- **Determine Depth**: If sub-aspects created, check if THEY need further breakdown (but scaled back one degree)
+- **Assign TYPEs**: Each sub-aspect gets TYPE classification
+- **Validate completeness**: Does coverage (via question categories + sub-aspects) represent everything needed?
 
 **Determine Brainstorming Sequence:**
 - Assign sequential numbers (1, 2, 3, ...) based on dependency order
